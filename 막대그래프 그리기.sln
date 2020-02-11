@@ -1,0 +1,18 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+# SharpDevelop 4.4
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "막대그래프 그리기", "막대그래프 그리기\막대그래프 그리기.csproj", "{572803C0-587D-4E05-BC4F-49B9B166DFD5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{572803C0-587D-4E05-BC4F-49B9B166DFD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{572803C0-587D-4E05-BC4F-49B9B166DFD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{572803C0-587D-4E05-BC4F-49B9B166DFD5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{572803C0-587D-4E05-BC4F-49B9B166DFD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+EndGlobal

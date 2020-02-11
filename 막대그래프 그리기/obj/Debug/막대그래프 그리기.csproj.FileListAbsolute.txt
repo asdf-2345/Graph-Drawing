@@ -1,0 +1,8 @@
+F:\a\막대그래프 그리기\막대그래프 그리기\obj\Debug\막대그래프 그리기.csprojResolveAssemblyReference.cache
+F:\a\막대그래프 그리기\막대그래프 그리기\obj\Debug\막대그래프_그리기.MainForm.resources
+F:\a\막대그래프 그리기\막대그래프 그리기\obj\Debug\막대그래프 그리기.csproj.GenerateResource.Cache
+F:\a\막대그래프 그리기\막대그래프 그리기\bin\Debug\막대그래프 그리기.exe.config
+F:\a\막대그래프 그리기\막대그래프 그리기\bin\Debug\막대그래프 그리기.exe
+F:\a\막대그래프 그리기\막대그래프 그리기\bin\Debug\막대그래프 그리기.pdb
+F:\a\막대그래프 그리기\막대그래프 그리기\obj\Debug\막대그래프 그리기.exe
+F:\a\막대그래프 그리기\막대그래프 그리기\obj\Debug\막대그래프 그리기.pdb
