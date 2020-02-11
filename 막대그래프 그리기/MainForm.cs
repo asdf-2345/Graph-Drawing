@@ -20,27 +20,55 @@ namespace 막대그래프_그리기
 			InitializeComponent();
 		}
 		
-		void drawRectangle(Pen p, Graphics g){
+		void drawRectangle(Pen p, Graphics g, int x){
 			int y = 10;
-			int x = 50;
 			Rectangle rec = new Rectangle(0, y, x, 20);
             g.DrawRectangle(p, rec);
 		}
 		
 		void drawLine(Pen p, Graphics g){
-			int y = 10;
-			int x = 50;
 			Point point1 = new Point(0, 0);
 			Point point2 = new Point(0, panel1.Height);
 			g.DrawLine(p, point1, point2);
 		}
 		
+		int[] GraphTopics;
 		void Panel1Paint(object sender, PaintEventArgs e)
 		{
-			Pen p = new Pen(Color.Black, 1);
-			Graphics g = this.panel1.CreateGraphics();
-			drawLine(p, g);
-			drawRectangle(p, g);
+			if(drawPossibility){
+				Pen p = new Pen(Color.Black, 1);
+				Graphics g = this.panel1.CreateGraphics();
+				drawLine(p, g);
+				for(int a = 0; a < GraphTopics.Length; a++){
+					drawRectangle(p, g, GraphTopics[a]);
+				}
+			}
+		}
+		
+		//항목개수 입력완료
+		void Button1Click(object sender, EventArgs e)
+		{
+			try{
+				int a = int.Parse(textBox1.Text.ToString());
+				GraphTopics = new int[a];
+				GraphTopicsEnter(a);
+			}
+			catch{
+				MessageBox.Show("다시 입력해주세요.");
+				return;
+			}
+		}
+		
+		bool drawPossibility = false;
+		void GraphTopicsEnter(int length){
+			for(int a = 1; a <= length; a++){
+				Form1 form1 = new Form1();
+				form1.num = a;
+				form1.ShowDialog();
+				GraphTopics[a-1] = form1.Size;
+				Console.WriteLine(GraphTopics[a-1]);
+			}
+			drawPossibility = true;
 		}
 	}
 }
