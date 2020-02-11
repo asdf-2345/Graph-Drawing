@@ -20,8 +20,7 @@ namespace 막대그래프_그리기
 			InitializeComponent();
 		}
 		
-		void drawRectangle(Pen p, Graphics g, int x){
-			int y = 10;
+		void drawRectangle(Pen p, Graphics g, int y, int x){
 			Rectangle rec = new Rectangle(0, y, x, 20);
             g.DrawRectangle(p, rec);
 		}
@@ -35,12 +34,15 @@ namespace 막대그래프_그리기
 		int[] GraphTopics;
 		void Panel1Paint(object sender, PaintEventArgs e)
 		{
+			Pen p = new Pen(Color.Black, 1);
+			Graphics g = this.panel1.CreateGraphics();
+			
+			drawLine(p, g);
+			
 			if(drawPossibility){
-				Pen p = new Pen(Color.Black, 1);
-				Graphics g = this.panel1.CreateGraphics();
-				drawLine(p, g);
+				
 				for(int a = 0; a < GraphTopics.Length; a++){
-					drawRectangle(p, g, GraphTopics[a]);
+					drawRectangle(p, g, 10 + a * 30 ,GraphTopics[a]);
 				}
 			}
 		}
@@ -69,6 +71,13 @@ namespace 막대그래프_그리기
 				Console.WriteLine(GraphTopics[a-1]);
 			}
 			drawPossibility = true;
+			
+			Pen p = new Pen(Color.Black, 1);
+			Graphics g = this.panel1.CreateGraphics();
+			
+			for(int a = 0; a < GraphTopics.Length; a++){
+				drawRectangle(p, g, 10 + a * 30, GraphTopics[a]);
+			}
 		}
 	}
 }
